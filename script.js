@@ -93,25 +93,3 @@ const deleteTask = function() {
     });
 }
 deleteTask();
-
-//registration and log in
-const activateModal = function() {
-    loginBtn.addEventListener("click", () => {
-        modalWrapper.style.visibility = "visible";
-    });
-}
-activateModal();
-
-const closeModal = function() {
-    closeModalBtn.addEventListener("click", () => {
-        modalWrapper.style.visibility = "hidden";
-    });
-    const handleClose = function(event) {
-        if (event.target != modal && event.target.parentElement != modal) {
-            modalWrapper.style.visibility = "hidden";
-        }
-    }
-    modalWrapper.addEventListener("click", handleClose);
-}
-closeModal();
-
